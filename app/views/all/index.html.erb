@@ -1,0 +1,23 @@
+<h1>Here are the users and stuff in database!</h1>
+<h2>Users and just their Usernames</h2>
+<% @users.each do |user| %>
+    <%= user.username%>
+    <br/>
+<% end %>
+<h2>Todos and just the Todos Names</h2>
+<% @todos.each do |todo| %>
+    <%= todo.tasks%>
+    <br/>
+<% end %>
+<%= form_tag all_path do %>
+    <%= label_tag(:todo_name, "Name") %>
+    <%= text_field_tag(:todo_name,nil) %>
+    <%= submit_tag("Create Todos") %>
+<% end %>
+<h2>Cats and just their Cats Names </h2>
+<% @cats.each do |cat| %>
+    <%= cat.name%>
+    <br/>
+<% end %>
+
+
